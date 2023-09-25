@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    prefix: 'fb-',
+
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
