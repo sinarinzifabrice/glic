@@ -9,7 +9,7 @@
             //     "progressBar": true,
             //     "closeButton": true,
             // }
-            toastr.success("{{ Session::get('message') }}")
+            toastr.success("{{ Session::get('delete') }}")
         </script>
     @endif
 

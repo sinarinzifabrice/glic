@@ -5,11 +5,11 @@
     <p><a href="/bien/create" class="btn btn-outline-success">ajouter un bien</a></p>
     @if (Session::has('delete'))
         <script>
-            // toastr.options = {
-            //     "progressBar": true,
-            //     "closeButton": true,
-            // }
-            toastr.success("{{ Session::get('message') }}")
+            toastr.options = {
+                "progressBar": true,
+                "closeButton": true,
+            }
+            toastr.success("{{ Session::get('delete') }}")
         </script>
     @endif
 

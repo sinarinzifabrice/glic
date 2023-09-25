@@ -80,7 +80,7 @@ class BienController extends Controller
     public function destroy(Bien $bien)
     {
         $bien->delete();
-        return redirect()->route('bien.index')->with('message', "la suppression du bien a été bien effectuée.");
+        return redirect()->route('bien.index')->with('statut', "la suppression du bien a été bien effectuée.");
     }
 
     public function validateBien(Request $request): array

@@ -73,14 +73,11 @@ class BienController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Bien  $bien
-     * @return RedirectResponse
      */
-    public function destroy(Bien $bien)
+    public function destroy(string $id)
     {
         $bien->delete();
-        return redirect()->route('bien.index')->with('message', "la suppression du bien a été bien effectuée.");
+        return redirect()->route('bien.index')->with('statut', "la suppression du bien a été bien effectuée.");
     }
 
     public function validateBien(Request $request): array
