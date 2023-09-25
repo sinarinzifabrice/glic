@@ -67,7 +67,7 @@ class BienController extends Controller
      */
     public function edit(Bien $bien): View
     {
-        return view('Bien.ModifierBien', ['bien' => $bien]);
+        return view('Bien.ModifierBien');
     }
 
    /**
@@ -87,6 +87,7 @@ class BienController extends Controller
         $bien->quartier = $request->quartier;
         $bien->ville = $request->ville;
         $bien->statut = $request->boolean('statut');
+        $bien->typede_bien = $request->typede_bien;
         $bien->save();
         return redirect()->route('bien.index')->with('statut', "Le bien dont le muméro est $bien->id  a été modifié.");
     }
@@ -100,7 +101,7 @@ class BienController extends Controller
     public function destroy(Bien $bien): RedirectResponse
     {
         $bien->delete();
-        return redirect()->route('bien.index')->with('statut', "la suppression du bien a été bien effectuée.");
+        return redirect()->route('bien.index')->with('message', "la suppression du bien a été bien effectuée.");
     }
 
     public function validateBien(Request $request): array

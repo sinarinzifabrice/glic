@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Bien;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 
 class BienController extends Controller
 {
@@ -33,7 +32,7 @@ class BienController extends Controller
      * @param  Request  $request
      * @return RedirectResponse
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $this->validateBien($request);
         Bien::create([
@@ -59,36 +58,20 @@ class BienController extends Controller
         return view('Bien.Bien', ['bien' => $bien]);
     }
 
-     /**
+    /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Bien  $bien
-     * @return View
      */
-    public function edit(Bien $bien): View
+    public function edit(string $id)
     {
-        return view('Bien.ModifierBien', ['bien' => $bien]);
+        //
     }
 
-   /**
+    /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bien  $bien
-     * @return RedirectResponse
      */
-    public function update(Request $request, Bien $bien): RedirectResponse
+    public function update(Request $request, string $id)
     {
-        $this->validateBien($request);
-        $bien->loyer = $request->loyer;
-        $bien->numappartement = $request->numappartement;
-        $bien->numrue = $request->numrue;
-        $bien->nomrue = $request->nomrue;
-        $bien->quartier = $request->quartier;
-        $bien->ville = $request->ville;
-        $bien->statut = $request->boolean('statut');
-        $bien->save();
-        return redirect()->route('bien.index')->with('statut', "Le bien dont le muméro est $bien->id  a été modifié.");
+        //
     }
 
     /**
@@ -97,10 +80,10 @@ class BienController extends Controller
      * @param  \App\Models\Bien  $bien
      * @return RedirectResponse
      */
-    public function destroy(Bien $bien): RedirectResponse
+    public function destroy(Bien $bien)
     {
         $bien->delete();
-        return redirect()->route('bien.index')->with('statut', "la suppression du bien a été bien effectuée.");
+        return redirect()->route('bien.index')->with('message', "la suppression du bien a été bien effectuée.");
     }
 
     public function validateBien(Request $request): array

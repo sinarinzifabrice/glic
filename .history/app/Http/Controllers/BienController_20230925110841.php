@@ -59,36 +59,20 @@ class BienController extends Controller
         return view('Bien.Bien', ['bien' => $bien]);
     }
 
-     /**
+    /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Bien  $bien
-     * @return View
      */
     public function edit(Bien $bien): View
     {
-        return view('Bien.ModifierBien', ['bien' => $bien]);
+        return view('Bien.ModifierBien');
     }
 
-   /**
+    /**
      * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bien  $bien
-     * @return RedirectResponse
      */
-    public function update(Request $request, Bien $bien): RedirectResponse
+    public function update(Request $request, string $id)
     {
-        $this->validateBien($request);
-        $bien->loyer = $request->loyer;
-        $bien->numappartement = $request->numappartement;
-        $bien->numrue = $request->numrue;
-        $bien->nomrue = $request->nomrue;
-        $bien->quartier = $request->quartier;
-        $bien->ville = $request->ville;
-        $bien->statut = $request->boolean('statut');
-        $bien->save();
-        return redirect()->route('bien.index')->with('statut', "Le bien dont le muméro est $bien->id  a été modifié.");
+        //
     }
 
     /**
@@ -100,7 +84,7 @@ class BienController extends Controller
     public function destroy(Bien $bien): RedirectResponse
     {
         $bien->delete();
-        return redirect()->route('bien.index')->with('statut', "la suppression du bien a été bien effectuée.");
+        return redirect()->route('bien.index')->with('message', "la suppression du bien a été bien effectuée.");
     }
 
     public function validateBien(Request $request): array

@@ -87,6 +87,7 @@ class BienController extends Controller
         $bien->quartier = $request->quartier;
         $bien->ville = $request->ville;
         $bien->statut = $request->boolean('statut');
+        
         $bien->save();
         return redirect()->route('bien.index')->with('statut', "Le bien dont le muméro est $bien->id  a été modifié.");
     }
