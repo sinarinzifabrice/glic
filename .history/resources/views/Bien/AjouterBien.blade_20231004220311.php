@@ -79,7 +79,9 @@
                         <option value="{{ $type->id }}">
                             {{ $type->type }}</option>
                     @endforeach
+
                 </select>
+
             </div>
 
             <div class="formgroup col-md-4">

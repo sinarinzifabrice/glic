@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\TypedeBien;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -25,7 +24,7 @@ class BienFactory extends Factory
             'quartier' => fake()->randomElement(['Rohero', 'Bwiza', 'Quartier industriel', 'Ngagara']),
             'ville' => fake()->randomElement(['Bujumbura']),
             'statut' => fake()->boolean(),
-            'typede_bien' => fake()->randomElement(TypedeBien::all()->pluck('id')),
+            'php' => fake()->randomElement(TypedeBien::all()->pluck('id')),
         ];
     }
 }

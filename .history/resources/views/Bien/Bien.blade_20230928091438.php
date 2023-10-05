@@ -3,7 +3,7 @@
 @section('contenu')
     <div class="mt-4 d-flex justify-content-between align-items-center px-4">
         <h1>Bien</h1>
-        <p><a href="/bien" class="btn btn-outline-success">Afficher la liste</a></p>
+        <p><a href="/bien" class="btn btn-outline-success">retour à la page liste</a></p>
     </div>
 
     <div class="container mt-4">
@@ -40,7 +40,6 @@
                         </h2>
                         <h2 class="card-title">Quartier : {{ $bien->quartier }}</h2>
                         <h2 class="card-title">Ville : {{ $bien->ville }}</h2>
-                        <h2 class="card-title">Type de bien: {{ $bien->typede_Bien->type }} </h2>
 
                         <p class="card-text">le loyer est de {{ $bien->loyer }}$</p>
 

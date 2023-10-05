@@ -32,7 +32,7 @@
                             @if ($bien->statut == '1')
                                 <p class="card-text"><span class="badge rounded-pill text-bg-success">occupe</span></p>
                             @endif
-                            <h2 class="card-title">{{ $bien->typede_Bien->type }} </h2>
+
                             <p class="card-text"><small class="text-muted">{{ $bien->numrue }} {{ $bien->nomrue }}</small>
                             </p>
                             <p class="card-text"><small class="text-muted">{{ $bien->quartier }}, {{ $bien->ville }},

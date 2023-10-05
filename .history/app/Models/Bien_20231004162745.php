@@ -25,5 +25,4 @@ class Bien extends Model
         return $this->hasMany(Contrat::class);
     }
 
-
 }
