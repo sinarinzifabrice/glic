@@ -15,7 +15,8 @@
                 <input type="number" class="form-control" id="loyer" name="loyer" min="120000"
                     value="{{ old('loyer') }}" required>
                 @error('loyer')
-                    <p class="text-danger">{{ $message }}</p>
+                    <p class="text-danger">{{ $message }
+                    }</p>
                 @enderror
                 <div class="invalid-feedback">
                     <p>Le champ loyer est obligatoire</p>
@@ -70,16 +71,6 @@
                 @error('ville')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
-            </div>
-
-            <div class="formgroup col-md-4">
-                <label for="typede_bien" class="form-label">Type de Bien</label>
-                <select id="typede_bien" class="form-select" name="typede_bien">
-                    @foreach ($types as $type)
-                        <option value="{{ $type->id }}">
-                            {{ $type->type }}</option>
-                    @endforeach
-                </select>
             </div>
 
             <div class="formgroup col-md-4">

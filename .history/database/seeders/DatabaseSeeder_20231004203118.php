@@ -22,6 +22,6 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         TypedeBien::factory(3)->create();
-        Bien::factory(5)->create();
+        //Bien::factory(5)->create();
     }
 }

@@ -60,7 +60,6 @@ class BienController extends Controller
             'codepostale' => $request->codepostale,
             'ville' => $request->ville,
             'quartier' => $request->quartier,
-            'typede_bien' => $request->typede_bien,
             'province' => $request->province,
             'statut' => $request->boolean('statut'),
             'photo' => $filename,
@@ -74,7 +73,7 @@ class BienController extends Controller
      */
     public function show(Bien $bien)
     {
-        return view('Bien.Bien', ['bien' => $bien,['types' => TypedeBien::all()]]);
+        return view('Bien.Bien', ['bien' => $bien]);
     }
 
      /**
@@ -85,7 +84,7 @@ class BienController extends Controller
      */
     public function edit(Bien $bien): View
     {
-        return view('Bien.ModifierBien', ['bien' => $bien, 'types' => TypedeBien::all()]);
+        return view('Bien.ModifierBien', ['bien' => $bien]);
     }
 
    /**

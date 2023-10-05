@@ -61,18 +61,7 @@
 
             </div>
 
-            <div class="formgroup col-md-4">
-                <label for="typede_bien" class="form-label">Type de Bien</label>
-                <select id="typede_bien" class="form-select" name="typede_bien">
-                    @foreach ($types as $type)
-                        <option value="{{ $type->id }}" @if ($bien->typede_bien == $type->id) selected @endif>
-                            {{ $type->type }}</option>
-                    @endforeach
-
-                </select>
-
-            </div>
-
+            
             <div class="formgroup col-12">
                 <label for="statut" class="form-label">Occupé</label>
                 <input type="checkbox" name="statut" value="1" @checked($bien->statut || old('statut', 0) === 1)>

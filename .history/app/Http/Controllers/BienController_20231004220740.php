@@ -85,7 +85,7 @@ class BienController extends Controller
      */
     public function edit(Bien $bien): View
     {
-        return view('Bien.ModifierBien', ['bien' => $bien, 'types' => TypedeBien::all()]);
+        return view('Bien.ModifierBien', ['bien' => $bien);
     }
 
    /**

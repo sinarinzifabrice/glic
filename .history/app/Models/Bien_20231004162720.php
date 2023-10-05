@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Contrat;
 use App\Models\TypedeBien;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -24,6 +23,5 @@ class Bien extends Model
     {
         return $this->hasMany(Contrat::class);
     }
-
 
 }

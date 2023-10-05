@@ -3,7 +3,7 @@
 @section('contenu')
     <div class="mt-4 d-flex justify-content-between align-items-center px-4">
         <h1>Liste des Biens</h1>
-        <p><a href="/bien/create" class="btn btn-outline-success">Ajouter un bien</a></p>
+        <p><a href="/bien/create" class="btn btn-outline-success">ajouter un bien</a></p>
 
     </div>
 
@@ -32,7 +32,7 @@
                             @if ($bien->statut == '1')
                                 <p class="card-text"><span class="badge rounded-pill text-bg-success">occupe</span></p>
                             @endif
-                            <h2 class="card-title">{{ $bien->typede_Bien->type }} </h2>
+
                             <p class="card-text"><small class="text-muted">{{ $bien->numrue }} {{ $bien->nomrue }}</small>
                             </p>
                             <p class="card-text"><small class="text-muted">{{ $bien->quartier }}, {{ $bien->ville }},

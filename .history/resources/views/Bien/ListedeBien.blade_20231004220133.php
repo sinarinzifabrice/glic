@@ -3,7 +3,7 @@
 @section('contenu')
     <div class="mt-4 d-flex justify-content-between align-items-center px-4">
         <h1>Liste des Biens</h1>
-        <p><a href="/bien/create" class="btn btn-outline-success">Ajouter un bien</a></p>
+        <p><a href="/bien/create" class="btn btn-outline-success">Qjouter un bien</a></p>
 
     </div>
 

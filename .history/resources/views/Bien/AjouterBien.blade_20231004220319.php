@@ -79,6 +79,7 @@
                         <option value="{{ $type->id }}">
                             {{ $type->type }}</option>
                     @endforeach
+
                 </select>
             </div>
 

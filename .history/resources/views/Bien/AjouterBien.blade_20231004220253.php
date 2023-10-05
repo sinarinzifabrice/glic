@@ -73,16 +73,6 @@
             </div>
 
             <div class="formgroup col-md-4">
-                <label for="typede_bien" class="form-label">Type de Bien</label>
-                <select id="typede_bien" class="form-select" name="typede_bien">
-                    @foreach ($types as $type)
-                        <option value="{{ $type->id }}">
-                            {{ $type->type }}</option>
-                    @endforeach
-                </select>
-            </div>
-
-            <div class="formgroup col-md-4">
                 <label for="statut" class="form-label">Statut</label>
                 <select id="statut" class="form-select" name="statut">
                     <option @selected(old('statut') === 'vide') value="0" selected>Vide</option>
