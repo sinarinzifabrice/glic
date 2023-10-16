@@ -20,10 +20,6 @@ Route::resource('bien', BienController::class);
 Route::get('/', [BienController::class, 'index']);
 //--------------------fin Bien-------------------------------
 
-// ---------------typedebien-----------------------------
-Route::resource('typedebiens', TypedeBienController::class);
-//--------------------fin typedebien -------------------------
-
 Route::get('/', function () {
     return view('welcome');
 });

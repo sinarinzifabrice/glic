@@ -22,7 +22,7 @@ Route::get('/', [BienController::class, 'index']);
 
 // ---------------typedebien-----------------------------
 Route::resource('typedebiens', TypedeBienController::class);
-//--------------------fin typedebien -------------------------
+//--------------------fi
 
 Route::get('/', function () {
     return view('welcome');
