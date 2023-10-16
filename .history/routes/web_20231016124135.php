@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BienController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\TypedeBienController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +17,7 @@ use App\Http\Controllers\TypedeBienController;
 
 // ---------------Bien-----------------------------
 Route::resource('bien', BienController::class);
-// Route::get('/', [BienController::class, 'index']);
+Route::get('/', [BienController::class, 'index']);
 //--------------------fin Bien-------------------------------
 
 // ---------------typedebien-----------------------------
