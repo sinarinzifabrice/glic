@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e0ebf5;
+    margin: 0;
+    padding: 0;
+}
+
+
+.card-body h2{
+    font-size: 0.90em;
+}
+
+
+.card-body h3{
+    font-size: 0.80em;
+}
+
+.main{
+    margin-top: 1.5rem !important;
+    mar
+}
+
+
+.titre{
+    display: flex;
+    align-items: center!important;
+    justify-content: space-between!important;
+}
