@@ -1,15 +1,7 @@
 import './bootstrap';
 
+import Alpine from 'alpinejs';
 
-let form = document.querySelector('.needs-validation');
-form.addEventListener('submit',valider);
+window.Alpine = Alpine;
 
-
-function valider(e){
-    if(form.checkValidity()==false){
-        e.preventDefault();
-    }
-    form.classList.add('was-validated');
-}
-
-
+Alpine.start();

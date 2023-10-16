@@ -1,8 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BienController;
-use App\Http\Controllers\TypedeBienController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// ---------------Bien-----------------------------
-Route::resource('bien', BienController::class);
-Route::get('/', [BienController::class, 'index']);
-//--------------------fin Bien-------------------------------
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-// ---------------typedebien-----------------------------
-Route::resource('typedebiens', TypedeBienController::class);
-//--------------------fin typedebien--------------------------
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
