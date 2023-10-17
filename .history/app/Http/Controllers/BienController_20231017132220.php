@@ -112,7 +112,7 @@ class BienController extends Controller
             $filename = $bien->photo;
         }
 
-
+        
         $bien->loyer = $request->loyer;
         $bien->numappartement = $request->numappartement;
         $bien->numrue = $request->numrue;
@@ -122,7 +122,6 @@ class BienController extends Controller
         $bien->statut = $request->boolean('statut');
         $bien->photo = $filename;
         $bien->save();
-        
         flash()->addSuccess('Le bien a été modifié.');
         return redirect('bien');
     }

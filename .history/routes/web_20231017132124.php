@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BienController;
 use App\Http\Controllers\TypedeBienController;
-use App\Http\Controllers\LocataireController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes

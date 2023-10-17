@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Bien;
 use App\Models\TypedeBien;
-use App\Models\Locataire;
+use A
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

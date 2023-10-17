@@ -30,7 +30,7 @@ Route::resource('typedebiens', TypedeBienController::class);
 
 
 // ---------------locataire-----------------------------
-Route::resource('locataires', LocataireController::class);
+Route::resource('locataire', LocataireController::class);
 //--------------------fin locataire-------------------------------
 
 

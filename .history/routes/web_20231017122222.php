@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BienController;
 use App\Http\Controllers\TypedeBienController;
-use App\Http\Controllers\LocataireController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,11 +26,9 @@ Route::get('/', [BienController::class, 'index']);
 
 // ---------------typedebien-----------------------------
 Route::resource('typedebiens', TypedeBienController::class);
-//--------------------fin typedebien--------------------------
+//--------------------fin typedebien --------------------------
 
 
 // ---------------locataire-----------------------------
 Route::resource('locataires', LocataireController::class);
 //--------------------fin locataire-------------------------------
-
-
