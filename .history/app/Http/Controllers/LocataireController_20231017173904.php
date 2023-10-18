@@ -79,12 +79,15 @@ class LocataireController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Locataire  $locataire
+     * @return RedirectResponse
+
      */
     public function update(Request $request, Locataire $locataire)
     {
         $this->validateLocataire($request);
-        $locataire->nom = $request->nom;
+        $locataire->nom = $request->no;
         $locataire->prenom = $request->prenom;
         $locataire->email = $request->email;
         $locataire->emailcontact = $request->emailcontact;
@@ -93,7 +96,7 @@ class LocataireController extends Controller
         $locataire->save();
 
         flash()->addSuccess('Le locataire a été modifié.');
-        return redirect()->route('locataires.index');
+        return redirect()->route('locatair.index');
 
     }
 
@@ -107,7 +110,7 @@ class LocataireController extends Controller
     {
         $locataire->delete();
         flash()->addSuccess('la suppression du locataire a été bien effectuée.');
-        return redirect()->route('locataires.index');
+        return redirect()->route('locataire.index');
 
     }
 
@@ -117,7 +120,7 @@ class LocataireController extends Controller
             'nom' => ['required', 'string'],
             'prenom' => ['required', 'string'],
             'email' => ['required', 'email'],
-            'emailcontact' => ['required', 'email'],
+            'emaildecontact' => ['required', 'email'],
             'telephone' => ['required', 'string'],
             'nomentreprise' => ['string'],
 

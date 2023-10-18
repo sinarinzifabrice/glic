@@ -93,7 +93,7 @@ class LocataireController extends Controller
         $locataire->save();
 
         flash()->addSuccess('Le locataire a été modifié.');
-        return redirect()->route('locataires.index');
+        return redirect()->route('locataire.index');
 
     }
 
@@ -107,7 +107,7 @@ class LocataireController extends Controller
     {
         $locataire->delete();
         flash()->addSuccess('la suppression du locataire a été bien effectuée.');
-        return redirect()->route('locataires.index');
+        return redirect()->route('locataire.index');
 
     }
 
