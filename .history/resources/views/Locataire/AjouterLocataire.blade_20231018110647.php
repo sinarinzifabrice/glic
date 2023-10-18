@@ -50,7 +50,7 @@
             <div class="formgroup col-md-6">
                 <label for="telephone" class="form-label">Telephone<sup>*</sup></label>
                 <input type="text" class="form-control" id="telephone" name="telephone" value="{{ old('telephone') }}" required>
-                @error('telephone')
+                @error('emailcontact')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <div class="invalid-feedback">

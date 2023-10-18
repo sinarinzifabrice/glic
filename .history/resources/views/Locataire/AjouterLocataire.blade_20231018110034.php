@@ -49,8 +49,8 @@
             </div>
             <div class="formgroup col-md-6">
                 <label for="telephone" class="form-label">Telephone<sup>*</sup></label>
-                <input type="text" class="form-control" id="telephone" name="telephone" value="{{ old('telephone') }}" required>
-                @error('telephone')
+                <input type="text" class="form-control" id="telephone" name="telephone" required>
+                @error('emailcontact')
                 <p class="text-danger">{{ $message }}</p>
             @enderror
             <div class="invalid-feedback">
@@ -59,7 +59,7 @@
             </div>
             <div class="formgroup col-md-6">
                 <label for="nomentreprise" class="form-label">Nom de l'entreprise</label>
-                <input type="text" class="form-control" id="nomentreprise" name="nomentreprise" value="{{ old('nomentreprise') }}">
+                <input type="text" class="form-control" id="nomentreprise" name="nomentreprise">
 
             </div>
 

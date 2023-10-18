@@ -121,11 +121,7 @@ class LocataireController extends Controller
                     $fail('L\'adresse e-mail n\'est pas valide.');
                 }
             }],
-            'emailcontact' => ['required', 'email',function ($attribute, $value, $fail) {
-                if (!filter_var($value, FILTER_VALIDATE_EMAIL)) {
-                    $fail('L\'adresse e-mail n\'est pas valide.');
-                }
-            }],
+            'emailcontact' => ['required', 'email',],
             'telephone' => ['required', 'string'],
             'nomentreprise' => ['string'],
 
