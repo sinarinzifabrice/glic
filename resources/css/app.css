@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +13,10 @@ body{
     background-color: #e0ebf5;
     margin: 0;
     padding: 0;
+}
+
+.user{
+    background-color: #6c757d !important;
 }
 
 .card {

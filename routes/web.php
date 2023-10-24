@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BienController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContratController;
 use App\Http\Controllers\LocataireController;
 use App\Http\Controllers\TypedeBienController;
@@ -16,27 +17,12 @@ use App\Http\Controllers\TypedeBienController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 // ---------------Bien-----------------------------
 Route::resource('bien', BienController::class);
-Route::get('/', [BienController::class, 'index']);
+// Route::get('/', [BienController::class, 'index']);
 //--------------------fin Bien-------------------------------
 
 // ---------------typedebien-----------------------------
 Route::resource('typedebiens', TypedeBienController::class);
-//--------------------fin typedebien--------------------------
-
-
-// ---------------locataire-----------------------------
-Route::resource('locataires', LocataireController::class);
-//--------------------fin locataire-------------------------------
-
-
-// ---------------Contrat-----------------------------
-Route::resource('contrats', ContratController::class);
-//--------------------fin Contrat-------------------------------
-
-
+//--------------------fin typedebien -------------------------

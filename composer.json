@@ -19,6 +19,7 @@
         "laravel-lang/attributes": "^2.4",
         "laravel-lang/common": "^4.0",
         "laravel-lang/lang": "^13.2",
+        "laravel/breeze": "^1.25",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
         "mockery/mockery": "^1.4.4",

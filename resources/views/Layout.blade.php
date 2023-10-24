@@ -8,7 +8,8 @@
     <!-- Fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -48,7 +49,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">Biens</a>
+                            <a class="nav-link" aria-current="page" href="/bien">Biens</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/locataires">Liste des Locataires</a>
@@ -61,6 +62,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/typedebiens">Liste des Types</a>
                         </li>
+                        @auth
+                            <div class="dropdown">
+                                <button class="btn user btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/profile" class="dropdown-item" type="button">Profile</a></li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+
+                                            <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                                {{ __('Log Out') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        @endauth
+
                     </ul>
                 </div>
             </div>
