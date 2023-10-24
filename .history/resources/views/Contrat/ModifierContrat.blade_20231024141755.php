@@ -23,7 +23,7 @@
                 <label for="datefin" class="form-label">Date de début de contrat<sup>*</sup></label>
                 <input type="date" class="form-control" id="datefin" name="datefin"
                     value="{{ old('datefin') ? old('datefin') : $contrat->datefin }}"
-                    title="le champ est obligatoire" required>
+                    title="le champ est obligatoire" re>
                 @error('datefin')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
