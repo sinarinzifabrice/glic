@@ -24,7 +24,7 @@ class BienFactory extends Factory
             'nomrue' => fake()->streetName(),
             'quartier' => fake()->randomElement(['Rohero', 'Bwiza', 'Quartier industriel', 'Ngagara']),
             'ville' => fake()->randomElement(['Bujumbura']),
-            'statut' => false, 
+            'statut' => fake()->boolean(fasle),
             'typede_bien' => fake()->randomElement(TypedeBien::all()->pluck('id')),
         ];
     }
