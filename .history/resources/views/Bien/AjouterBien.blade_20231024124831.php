@@ -19,7 +19,7 @@
                         <p class="text-danger">{{ $message }}</p>
                     @enderror
                     <div class="invalid-feedback">
-                        <p>Le champ loyer est obligatoire et le montant minimum est de 120000</p>
+                        <p>Le champ loyer est obligatoire</p>
                     </div>
                 </div>
                 <div class="formgroup col-md-6">
