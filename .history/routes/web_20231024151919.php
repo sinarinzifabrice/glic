@@ -39,9 +39,6 @@ Route::resource('contrats', ContratController::class);
 Route::resource('locataires', LocataireController::class);
 //--------------------fin locataire-------------------------------
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

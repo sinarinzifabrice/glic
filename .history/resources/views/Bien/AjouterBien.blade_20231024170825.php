@@ -9,7 +9,7 @@
 
         <div class="mt-4">
 
-            <form id="bien" class="needs-validation needs-validations row g-3" method="POST" action="{{ route('bien.store') }}" novalidate enctype="multipart/form-data">
+            <form id="bien" class="needs-validation needs-validation row g-3" method="POST" action="{{ route('bien.store') }}" novalidate enctype="multipart/form-data">
                 @csrf
                 <div class="formgroup col-md-6">
                     <label for="loyer" class="form-label">Loyer<sup>*</sup></label>
