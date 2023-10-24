@@ -29,7 +29,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> --}}
 
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/validation.js'])
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contrats">Liste des Contrats</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="/typedebiens">Liste des Types</a>
                         </li>
