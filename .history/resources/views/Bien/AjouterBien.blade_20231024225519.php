@@ -3,9 +3,9 @@
 @section('contenu')
 
     <div class="container">
-        <div class="titre">
+        {{-- <div class="titre">
             <h1>Formulaire d'ajout de Bien</h1>
-        </div>
+        </div> --}}
 
         <div class="mt-4">
 
@@ -87,13 +87,13 @@
                 <div class="formgroup col-md-4">
                     <label for="statut" class="form-label">Statut</label>
                     <select id="statut" class="form-select" name="statut">
-                        <option @selected(old('statut') === 'vide') value="0">Vide</option>
-
+                        <option @selected(old('statut') === 'vide') value="0" selected>Vide</option>
+                        {{-- <option @selected(old('statut') === 'occupe') value="1">Occupe</option> --}}
                     </select>
                 </div>
 
                 <div class="col-8">
-                    <label for="photo" class="form-label">Téléverser l'image du bien</label>
+                    <label for="photo" class="form-label">Mettre l'image du bien</label>
                     <input class="form-control" type="file" name="photo" id="photo" accept="image/jpg, image/jpeg, image/png">
                 </div>
 
@@ -103,8 +103,6 @@
             </form>
 
         </div>
-
-
     </div>
 
 @endsection

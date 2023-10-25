@@ -93,7 +93,7 @@
                 </div>
 
                 <div class="col-8">
-                    <label for="photo" class="form-label">Téléverser l'image du bien</label>
+                    <label for="photo" class="form-label">téléverser l'image du bien</label>
                     <input class="form-control" type="file" name="photo" id="photo" accept="image/jpg, image/jpeg, image/png">
                 </div>
 

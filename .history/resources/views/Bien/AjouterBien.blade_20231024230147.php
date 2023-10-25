@@ -86,14 +86,14 @@
 
                 <div class="formgroup col-md-4">
                     <label for="statut" class="form-label">Statut</label>
-                    <select id="statut" class="form-select" name="statut">
+                    {{-- <select id="statut" class="form-select" name="statut">
                         <option @selected(old('statut') === 'vide') value="0">Vide</option>
-
-                    </select>
+                        <option @selected(old('statut') === 'occupe') value="1">Occupe</option>
+                    </select> --}}
                 </div>
 
                 <div class="col-8">
-                    <label for="photo" class="form-label">Téléverser l'image du bien</label>
+                    <label for="photo" class="form-label">Mettre l'image du bien</label>
                     <input class="form-control" type="file" name="photo" id="photo" accept="image/jpg, image/jpeg, image/png">
                 </div>
 
@@ -103,8 +103,6 @@
             </form>
 
         </div>
-
-
     </div>
 
 @endsection

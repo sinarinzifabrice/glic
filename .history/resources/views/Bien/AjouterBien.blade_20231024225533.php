@@ -11,7 +11,7 @@
 
             <form id="bien" class="needs-validation needs-validations row g-3" method="POST" action="{{ route('bien.store') }}" novalidate enctype="multipart/form-data">
                 @csrf
-                <div class="formgroup col-md-6">
+                {{-- <div class="formgroup col-md-6">
                     <label for="loyer" class="form-label">Loyer<sup>*</sup></label>
                     <input type="number" class="form-control" id="loyer" name="loyer" min="120000"
                         value="{{ old('loyer') }}" required
@@ -22,7 +22,7 @@
                     <div class="invalid-feedback">
                         <p>Le champ loyer est obligatoire et le montant minimum est de 120000</p>
                     </div>
-                </div>
+                </div> --}}
                 <div class="formgroup col-md-6">
                     <label for="numappartement" class="form-label">Numéro d'appartement</label>
                     <input type="number" class="form-control" value="{{ old('numappartement') }}" id="numappartement"
@@ -87,13 +87,13 @@
                 <div class="formgroup col-md-4">
                     <label for="statut" class="form-label">Statut</label>
                     <select id="statut" class="form-select" name="statut">
-                        <option @selected(old('statut') === 'vide') value="0">Vide</option>
-
+                        <option @selected(old('statut') === 'vide') value="0" selected>Vide</option>
+                        {{-- <option @selected(old('statut') === 'occupe') value="1">Occupe</option> --}}
                     </select>
                 </div>
 
                 <div class="col-8">
-                    <label for="photo" class="form-label">Téléverser l'image du bien</label>
+                    <label for="photo" class="form-label">Mettre l'image du bien</label>
                     <input class="form-control" type="file" name="photo" id="photo" accept="image/jpg, image/jpeg, image/png">
                 </div>
 
@@ -103,8 +103,6 @@
             </form>
 
         </div>
-
-
     </div>
 
 @endsection
