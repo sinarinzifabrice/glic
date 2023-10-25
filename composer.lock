@@ -6893,16 +6893,16 @@
         },
         {
             "name": "laravel-lang/lang",
-            "version": "13.2.3",
+            "version": "13.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Lang/lang.git",
-                "reference": "3960cc9a4c8fc6d05401d50516ee0f641a369d85"
+                "reference": "61eecbc7d902b576aad47a4c01454ef023f78450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/3960cc9a4c8fc6d05401d50516ee0f641a369d85",
-                "reference": "3960cc9a4c8fc6d05401d50516ee0f641a369d85",
+                "url": "https://api.github.com/repos/Laravel-Lang/lang/zipball/61eecbc7d902b576aad47a4c01454ef023f78450",
+                "reference": "61eecbc7d902b576aad47a4c01454ef023f78450",
                 "shasum": ""
             },
             "require": {
@@ -6955,7 +6955,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-09-27T11:53:08+00:00"
+            "time": "2023-10-24T14:30:01+00:00"
         },
         {
             "name": "laravel/breeze",

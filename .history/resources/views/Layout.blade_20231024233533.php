@@ -55,13 +55,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contrats">Contrats</a>
                         </li>
-
                         @auth
                         <li class="nav-item">
                             <a class="nav-link" href="/typedebiens">Types</a>
                         </li>
-                        @endauth
-                        
+
+
+
                         <li>
                             @auth
                                 <div class="dropdown">

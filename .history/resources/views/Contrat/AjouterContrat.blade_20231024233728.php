@@ -64,7 +64,6 @@
             <p>Le champ locataire est obligatoire</p>
         </div>
     </div>
-    
     @auth
         <div class="formgroup col-12">
             <label for="approuve" class="form-label">Approuver</label>

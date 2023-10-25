@@ -61,7 +61,6 @@
                             <a class="nav-link" href="/typedebiens">Types</a>
                         </li>
                         @endauth
-                        
                         <li>
                             @auth
                                 <div class="dropdown">

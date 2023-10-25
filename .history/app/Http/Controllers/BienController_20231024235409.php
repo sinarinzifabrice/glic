@@ -7,7 +7,6 @@ use App\Models\TypedeBien;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Database\QueryException;
 
 class BienController extends Controller
 {

@@ -64,14 +64,12 @@
             <p>Le champ locataire est obligatoire</p>
         </div>
     </div>
-    
-    @auth
+        @
         <div class="formgroup col-12">
             <label for="approuve" class="form-label">Approuver</label>
             <input type="checkbox" name="approuve" value="1" @checked(old('approuve', 0) === 1)>
 
         </div>
-    @endauth
 
     <div class="formgroup col-12">
         <button type="submit" class="btn btn-primary">Ajouter</button>

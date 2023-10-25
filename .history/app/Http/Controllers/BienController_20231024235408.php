@@ -7,7 +7,6 @@ use App\Models\TypedeBien;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Database\QueryException;
 
 class BienController extends Controller
 {
@@ -142,7 +141,7 @@ class BienController extends Controller
             flash()->addSuccess('Le bien a été supprimé.');
         } catch (QueryException $e) {
             // Gérer l'erreur ici, par exemple, afficher un message d'erreur
-            flash()->addError('Impossible de supprimer le bien car il est rattaché à un contrat.');
+            flash()->addError('Impossible de supprimer le bien car il est rattaché à un contrat .');
         }
 
         return redirect()->route('bien.index');
