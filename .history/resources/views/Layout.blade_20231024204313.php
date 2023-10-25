@@ -60,7 +60,13 @@
                             <a class="nav-link" href="/typedebiens">Liste des Types</a>
                         </li>
 
+                        <li>
+                            <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                        </li>
 
+                         <li>
+                            <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
 
                         <li>
                             @auth
@@ -84,14 +90,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                @else
-                                <li>
-                                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
-                                </li>
-
-                                 <li>
-                                    <a href="{{ route('register') }}" class="nav-link">Register</a>
-                                </li>
+                                
 
                             @endauth
                         </li>

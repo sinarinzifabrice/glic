@@ -60,39 +60,45 @@
                             <a class="nav-link" href="/typedebiens">Liste des Types</a>
                         </li>
 
+                        <li>
+                            <a href="{{ route('login') }}"class="nav-link"                               Log in
+                            </a>
 
+
+
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}"
+                                                class="tw-ml-4 tw-font-semibold tw-text-gray-600 tw-hover:text-gray-900 tw-dark:text-gray-400 tw-dark:hover:text-white tw-focus:tw-outline tw-focus:tw-outline-2 tw-focus:tw-rounded-sm tw-focus:tw-outline-red-500">
+                                                Register
+                                            </a>
+                                        @endif
+                                    @endauth
+
+
+                        </li>
 
                         <li>
                             @auth
                                 <div class="dropdown">
-                                    <button class="btn user btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        {{ Auth::user()->name }}
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/profile" class="dropdown-item" type="button">Profile</a></li>
-                                        <li>
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
+                                <button class="btn user btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/profile" class="dropdown-item" type="button">Profile</a></li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
 
-                                                <x-dropdown-link :href="route('logout')"
-                                                    onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                                    {{ __('Log Out') }}
-                                                </x-dropdown-link>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                                @else
-                                <li>
-                                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
-                                </li>
-
-                                 <li>
-                                    <a href="{{ route('register') }}" class="nav-link">Register</a>
-                                </li>
-
+                                            <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                                {{ __('Log Out') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                             @endauth
                         </li>
 

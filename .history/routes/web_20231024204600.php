@@ -20,7 +20,7 @@ use App\Http\Controllers\TypedeBienController;
 
 // ---------------Bien-----------------------------
 Route::resource('bien', BienController::class);
-Route::get('/', [BienController::class, 'index']);
+// Route::get('/', [BienController::class, 'index']);
 //--------------------fin Bien-------------------------------
 
 // ---------------typedebien-----------------------------

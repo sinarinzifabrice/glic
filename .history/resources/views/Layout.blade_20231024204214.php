@@ -60,7 +60,13 @@
                             <a class="nav-link" href="/typedebiens">Liste des Types</a>
                         </li>
 
+                        <li>
+                            <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                        </li>
 
+                         <li>
+                            <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
 
                         <li>
                             @auth
@@ -70,28 +76,20 @@
                                         {{ Auth::user()->name }}
                                     </button>
                                     <ul class="dropdown-menu">
-                                        <li><a href="/profile" class="dropdown-item" type="button">Profile</a></li>
-                                        <li>
-                                            <form method="POST" action="{{ route('logout') }}">
-                                                @csrf
+                                    <li><a href="/profile" class="dropdown-item" type="button">Profile</a></li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
 
-                                                <x-dropdown-link :href="route('logout')"
-                                                    onclick="event.preventDefault();
-                                                            this.closest('form').submit();">
-                                                    {{ __('Log Out') }}
-                                                </x-dropdown-link>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                                @else
-                                <li>
-                                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
-                                </li>
-
-                                 <li>
-                                    <a href="{{ route('register') }}" class="nav-link">Register</a>
-                                </li>
+                                            <x-dropdown-link :href="route('logout')"
+                                                onclick="event.preventDefault();
+                                                        this.closest('form').submit();">
+                                                {{ __('Log Out') }}
+                                            </x-dropdown-link>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
 
                             @endauth
                         </li>
