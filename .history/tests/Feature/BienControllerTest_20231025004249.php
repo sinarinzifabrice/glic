@@ -16,7 +16,7 @@ class BienControllerTest extends TestCase
     public function testAllRoutesReturn200()
     {
         $routes = [
-            'bien',        // Remplacez 'bien.index' par le nom de la route de votre liste de biens
+            'bien.index',        // Remplacez 'bien.index' par le nom de la route de votre liste de biens
             'bien.create',       // Remplacez 'bien.create' par le nom de la route pour créer un bien
             'bien.store',        // Remplacez 'bien.store' par le nom de la route pour enregistrer un bien
             'bien.show',         // Remplacez 'bien.show' par le nom de la route pour afficher un bien

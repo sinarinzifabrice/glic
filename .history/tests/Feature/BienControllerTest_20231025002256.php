@@ -2,10 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
-use App\Models\Bien;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Tests\TestCase;
 
 class BienControllerTest extends TestCase
 {
@@ -16,7 +15,7 @@ class BienControllerTest extends TestCase
     public function testAllRoutesReturn200()
     {
         $routes = [
-            'bien',        // Remplacez 'bien.index' par le nom de la route de votre liste de biens
+            'bien.index',        // Remplacez 'bien.index' par le nom de la route de votre liste de biens
             'bien.create',       // Remplacez 'bien.create' par le nom de la route pour créer un bien
             'bien.store',        // Remplacez 'bien.store' par le nom de la route pour enregistrer un bien
             'bien.show',         // Remplacez 'bien.show' par le nom de la route pour afficher un bien
@@ -31,20 +30,22 @@ class BienControllerTest extends TestCase
         }
     }
 
-    public function test_Affiche_une_liste_de_biens(): void
+    public function test_Affiche_une_liste_de_crayons(): void
     {
         // Créer un crayon avec les propriétés spécifiées
-        $bien = Bien::create([
-            'loyer' => 1200,
-            'numappartement' => null,
-            'numrue' => 23,
-            'nomrue' => 'rue jean',
+        $crayon = Bien::create([
+            'loyer' => $request->loyer,
+            'numappartement' => $request->numappartement,
+            'numrue' => $request->numrue,
+            'nomrue' => $request->nomrue,
+            'codepostale' => $request->codepostale,
             'ville' => $request->ville,
             'quartier' => $request->quartier,
             'typede_bien' => $request->typede_bien,
-            'statut' => 0,
-            'photo' => 'pas-de-photo.jpg',
-
+            'province' => $request->province,
+            'statut' => $request->boolean('statut'),
+            'photo' => $filename,
+        ]);
         ]);
 
         // Visitez la route "/"
@@ -54,11 +55,11 @@ class BienControllerTest extends TestCase
         $response->assertStatus(200);
 
         // Vérifie si la vue contient le texte "Crayon de rose", s'assurant ainsi que l'objet "Crayon" a été affiché
-        $response->assertSee('rue jean');
+        $response->assertSee('Crayon de rose');
 
         // Vérifie si la vue a reçu la variable "crayons" et que cette variable contient l'objet "Crayon" créé
-        $response->assertViewHas('biens', function($collection) use ($bien){
-            return $collection->contains($bien);
+        $response->assertViewHas('crayons', function($collection) use ($crayon){
+            return $collection->contains($crayon);
         });
 
 

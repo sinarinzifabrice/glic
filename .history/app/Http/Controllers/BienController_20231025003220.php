@@ -61,6 +61,7 @@ class BienController extends Controller
             'ville' => $request->ville,
             'quartier' => $request->quartier,
             'typede_bien' => $request->typede_bien,
+            'province' => $request->province,
             'statut' => $request->boolean('statut'),
             'photo' => $filename,
         ]);
@@ -118,7 +119,6 @@ class BienController extends Controller
         $bien->nomrue = $request->nomrue;
         $bien->quartier = $request->quartier;
         $bien->ville = $request->ville;
-        $bien->typede_bien = $request->typede_bien;
         $bien->statut = $request->boolean('statut');
         $bien->photo = $filename;
         $bien->save();

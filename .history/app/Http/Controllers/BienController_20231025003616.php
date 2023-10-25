@@ -118,7 +118,7 @@ class BienController extends Controller
         $bien->nomrue = $request->nomrue;
         $bien->quartier = $request->quartier;
         $bien->ville = $request->ville;
-        $bien->typede_bien = $request->typede_bien;
+        $bien
         $bien->statut = $request->boolean('statut');
         $bien->photo = $filename;
         $bien->save();
