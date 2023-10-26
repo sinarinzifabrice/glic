@@ -1,2 +1,0 @@
-@extends('lay')
-@section('contenu')
